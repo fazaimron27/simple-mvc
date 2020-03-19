@@ -1,0 +1,15 @@
+{
+    "require": {
+        "illuminate/database": "^5.8",
+        "illuminate/view": "^5.8",
+        "jenssegers/blade": "^1.2",
+        "robmorgan/phinx": "^0.11.4",
+        "fzaninotto/faker": "^1.9"
+    },
+
+    "autoload": {
+        "classmap": [
+            "app/models"
+        ]
+    }
+}
