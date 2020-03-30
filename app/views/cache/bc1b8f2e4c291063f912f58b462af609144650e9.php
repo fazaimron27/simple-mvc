@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">Add New User</div>
                 <div class="card-body">
-                    <form action="<?= BASEURL; ?>/user/store" method="POST">
+                    <form action="<?php echo e(BASEURL); ?>/user/store" method="POST">
                         <div class="form-group">
                             <label for="username">Username</label>
                             <input type="text" name="username" id="username" class="form-control">

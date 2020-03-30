@@ -35,7 +35,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="<?php echo e(BASEURL); ?>/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="<?php echo e(BASEURL); ?>/js/jquery-3.4.1.js"></script>
     <script src="<?php echo e(BASEURL); ?>/js/popper.min.js"></script>
     <script src="<?php echo e(BASEURL); ?>/js/bootstrap.min.js"></script>
     <script src="<?php echo e(BASEURL); ?>/js/datatables.min.js"></script>

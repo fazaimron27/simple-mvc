@@ -17,9 +17,9 @@ class UserSeeder extends AbstractSeed
     {
         $faker = Faker\Factory::create('ID_id');
         $data = [];
-        for ($i = 0; $i < 25; $i++) {
+        for ($i = 0; $i < 15; $i++) {
             $data[] = [
-                'username'      => $faker->name,
+                'username'      => $faker->userName,
                 'email'         => $faker->safeEmail,
                 'created_at'       => date('Y-m-d H:i:s'),
                 'updated_at'       => date('Y-m-d H:i:s'),

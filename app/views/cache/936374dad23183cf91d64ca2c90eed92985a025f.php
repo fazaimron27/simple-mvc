@@ -8,7 +8,8 @@
         <hr class="my-4">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fugiat dicta adipisci repellat aut recusandae
             quidem sit nobis</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <a class="btn btn-primary btn-lg" href="https://github.com/fazaimron27/simple_mvc" target="_blank"
+            role="button">View Code</a>
     </div>
 </div>
 <?php $__env->stopSection(); ?>
