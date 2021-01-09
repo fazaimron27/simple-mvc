@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\Controller;
+use App\Core\Helper;
 use App\Models\User as UserModel;
 
 class User extends Controller
@@ -24,8 +25,7 @@ class User extends Controller
             'username' => $_POST['username'],
             'email' => $_POST['email']
         ]);
-        header('Location: ' . BASEURL . '/user');
-        exit;
+        Helper::redirect('user');
     }
 
     public function edit($id)
@@ -41,14 +41,13 @@ class User extends Controller
             'username' => $_POST['username'],
             'email' => $_POST['email']
         ]);
-        header('Location: ' . BASEURL . '/user');
-        exit;
+        Helper::redirect('user');
     }
 
     public function destroy($id)
     {
         $user = UserModel::findOrFail($id);
         $user->delete();
-        header('Location: ' . BASEURL . '/user');
+        Helper::redirect('user');
     }
 }

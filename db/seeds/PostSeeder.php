@@ -1,9 +1,9 @@
 <?php
 
-use Faker\Factory;
+use Faker\Provider\Lorem;
 use Phinx\Seed\AbstractSeed;
 
-class UserSeeder extends AbstractSeed
+class PostSeeder extends AbstractSeed
 {
     /**
      * Run Method.
@@ -15,21 +15,17 @@ class UserSeeder extends AbstractSeed
      */
     public function run()
     {
-        $faker = Factory::create('ID_id');
-        $data = [];
         for ($i = 1; $i <= 15; $i++) {
-            $username = $faker->userName;
-            $email = $username . '@mail.com';
             $data[] = [
-                'username' => $username,
-                'email' => $email,
+                'title' => 'Title ' . $i,
+                'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ];
         }
 
-        $users = $this->table('users');
-        $users->insert($data)
+        $posts = $this->table('posts');
+        $posts->insert($data)
             ->saveData();
     }
 }

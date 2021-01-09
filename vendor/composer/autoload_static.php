@@ -214,7 +214,9 @@ class ComposerStaticInit5b4b5d5a7e819437a9a7951a38ea20e1
     );
 
     public static $classMap = array (
+        'App\\Models\\Post' => __DIR__ . '/../..' . '/app/models/Post.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/models/User.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
     );
 

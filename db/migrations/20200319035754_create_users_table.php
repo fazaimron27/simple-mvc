@@ -29,7 +29,7 @@ class CreateUsersTable extends AbstractMigration
      * Remember to call "create()" or "update()" and NOT "save()" when working
      * with the Table class.
      */
-    public function change()
+    public function up()
     {
         $users = $this->table('users', ['id' => 'id']);
         $users->addColumn('username', 'string')
@@ -37,5 +37,10 @@ class CreateUsersTable extends AbstractMigration
             ->addColumn('created_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
             ->addColumn('updated_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
             ->save();
+    }
+
+    public function down()
+    {
+        $this->table('users')->drop()->save();
     }
 }

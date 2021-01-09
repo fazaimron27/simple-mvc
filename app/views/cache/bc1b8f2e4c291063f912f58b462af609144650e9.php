@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Add Users'); ?>
+<?php $__env->startSection('title', 'Add User'); ?>
 
 <?php $__env->startSection('content'); ?>
 <div class="container mt-3">
