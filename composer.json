@@ -4,22 +4,24 @@
         "illuminate/view": "^5.8",
         "jenssegers/blade": "^1.2",
         "robmorgan/phinx": "^0.11.4",
-        "fzaninotto/faker": "^1.9"
+        "fzaninotto/faker": "^1.9",
+        "symfony/console": "^5.2"
     },
 
     "autoload": {
         "classmap": [
             "app/models",
-            "app/core"
+            "app/core",
+            "app/commands"
         ]
     },
 
     "scripts": {
-        "simtion": "vendor\\bin\\phinx",
-        "simtion-create": "vendor\\bin\\phinx create",
-        "simtion-migrate": "vendor\\bin\\phinx migrate",
-        "simtion-rollback": "vendor\\bin\\phinx rollback",
-        "simtion-seed": "vendor\\bin\\phinx seed:create",
-        "simtion-seed:run": "vendor\\bin\\phinx seed:run"
+        "phinx": "vendor\\bin\\phinx",
+        "migration:create": "vendor\\bin\\phinx create",
+        "migrate": "php app\\bin\\console.php migrate",
+        "rollback": "php app\\bin\\console.php rollback",
+        "seed:create": "vendor\\bin\\phinx seed:create",
+        "seed:run": "php app\\bin\\console.php seed:run"
     }
 }

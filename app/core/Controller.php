@@ -14,10 +14,10 @@ class Controller
         echo $blade->make($view, $data);
     }
 
-    public function model($model)
-    {
-        require_once 'app/models/' . $model . '.php';
-        $model = '\App\Models\\' . $model;
-        return new $model;
-    }
+    // public function model($model)
+    // {
+    //     require_once 'app/models/' . $model . '.php';
+    //     $model = '\App\Models\\' . $model;
+    //     return new $model;
+    // }
 }

@@ -15,7 +15,6 @@ class CreateUsersTable extends AbstractMigration
             ->addColumn('updated_at', 'timestamp', ['default' => 'CURRENT_TIMESTAMP'])
             ->addIndex(['username'], ['unique' => true])
             ->addIndex(['email'], ['unique' => true])
-            ->addForeignKey('role_id', 'roles', 'id', ['delete' => 'CASCADE', 'update' => 'CASCADE'])
             ->save();
     }
 

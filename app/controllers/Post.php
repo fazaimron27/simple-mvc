@@ -2,17 +2,17 @@
 
 namespace App\Controllers;
 
-use App\Core\Flasher;
 use App\Core\Controller;
-use App\Core\Helper;
+use App\Helpers\Auth;
+use App\Helpers\Redirect;
 use App\Models\Post as PostModel;
 
 class Post extends Controller
 {
     public function __construct()
     {
-        if (!Helper::auth()) {
-            Helper::redirect('auth/login');
+        if (!Auth::check()) {
+            Redirect::to('auth/login');
         }
     }
 
@@ -33,8 +33,7 @@ class Post extends Controller
             'title' => $_POST['title'],
             'body' => $_POST['content']
         ]);
-        // Flasher::setFlash('Post Succesfully Added', 'Congratulations!', 'success');
-        Helper::redirect('post');
+        Redirect::to('post');
     }
 
     public function edit($id)
@@ -50,13 +49,13 @@ class Post extends Controller
             'title' => $_POST['title'],
             'body' => $_POST['content']
         ]);
-        Helper::redirect('post');
+        Redirect::to('post');
     }
 
     public function destroy($id)
     {
         $user = PostModel::findOrFail($id);
         $user->delete();
-        Helper::redirect('post');
+        Redirect::to('post');
     }
 }

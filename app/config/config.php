@@ -3,6 +3,10 @@
 $uri = $_SERVER['HTTP_HOST'];
 
 define('BASEURL', 'http://' . $uri . '/mvc');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'mvc');
+
+class Config
+{
+    public $db_user = 'root';
+    public $db_pass = '';
+    public $db_name = 'mvc';
+}

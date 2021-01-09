@@ -23,13 +23,11 @@
                         <form action="<?php echo e(BASEURL); ?>/auth/postLogin" method="post">
                             <div class="form-group">
                                 <label for="username">Username</label>
-                                <input type="text" name="username" id="username" class="form-control"
-                                    placeholder="username" autofocus autocomplete="off">
+                                <input type="text" name="username" id="username" class="form-control" placeholder="username" autofocus autocomplete="off">
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" name="password" id="password" class="form-control"
-                                    placeholder="password" autocomplete="off">
+                                <input type="password" name="password" id="password" class="form-control" placeholder="password" autocomplete="off">
                             </div>
                             <button type="submit" class="btn btn-primary">Login</button>
                         </form>
