@@ -9,7 +9,8 @@
 
     "autoload": {
         "classmap": [
-            "app/models"
+            "app/models",
+            "app/core"
         ]
     }
 }
