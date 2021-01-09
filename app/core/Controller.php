@@ -8,7 +8,7 @@ class Controller
 {
     public function view($view, $data = [])
     {
-        $path = '../app/views';
+        $path = 'app/views';
         $blade = new Blade($path, $path . '/cache');
 
         echo $blade->make($view, $data);
@@ -16,7 +16,7 @@ class Controller
 
     public function model($model)
     {
-        require_once '../app/models/' . $model . '.php';
+        require_once 'app/models/' . $model . '.php';
         $model = '\App\Models\\' . $model;
         return new $model;
     }

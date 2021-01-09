@@ -9,6 +9,13 @@ use App\Models\Post as PostModel;
 
 class Post extends Controller
 {
+    public function __construct()
+    {
+        if (!Helper::auth()) {
+            Helper::redirect('auth/login');
+        }
+    }
+
     public function index()
     {
         $posts = PostModel::all();
@@ -26,7 +33,7 @@ class Post extends Controller
             'title' => $_POST['title'],
             'body' => $_POST['content']
         ]);
-        Flasher::setFlash('Post Succesfully Added', 'Congratulations!', 'success');
+        // Flasher::setFlash('Post Succesfully Added', 'Congratulations!', 'success');
         Helper::redirect('post');
     }
 

@@ -12,5 +12,14 @@
             "app/models",
             "app/core"
         ]
+    },
+
+    "scripts": {
+        "simtion": "vendor\\bin\\phinx",
+        "simtion-create": "vendor\\bin\\phinx create",
+        "simtion-migrate": "vendor\\bin\\phinx migrate",
+        "simtion-rollback": "vendor\\bin\\phinx rollback",
+        "simtion-seed": "vendor\\bin\\phinx seed:create",
+        "simtion-seed:run": "vendor\\bin\\phinx seed:run"
     }
 }

@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ BASEURL }}/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ BASEURL }}/css/datatables.min.css">
+    <link rel="stylesheet" href="{{ BASEURL }}/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ BASEURL }}/public/css/datatables.min.css">
 
     <title>@yield('title')</title>
 </head>
@@ -24,8 +24,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link" href="{{ BASEURL }}/user">User</a>
                     <a class="nav-item nav-link" href="{{ BASEURL }}/post">Post</a>
+                    <a class="nav-item nav-link" href="{{ BASEURL }}/auth/logout">Logout</a>
                 </div>
             </div>
         </div>
@@ -35,10 +35,10 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="{{ BASEURL }}/js/jquery-3.4.1.js"></script>
-    <script src="{{ BASEURL }}/js/popper.min.js"></script>
-    <script src="{{ BASEURL }}/js/bootstrap.min.js"></script>
-    <script src="{{ BASEURL }}/js/datatables.min.js"></script>
+    <script src="{{ BASEURL }}/public/js/jquery-3.4.1.js"></script>
+    <script src="{{ BASEURL }}/public/js/popper.min.js"></script>
+    <script src="{{ BASEURL }}/public/js/bootstrap.min.js"></script>
+    <script src="{{ BASEURL }}/public/js/datatables.min.js"></script>
     <script>
         $(document).ready(function () {
             $('#table_user').DataTable();
