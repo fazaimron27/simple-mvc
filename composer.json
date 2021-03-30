@@ -20,6 +20,7 @@
     },
 
     "scripts": {
+        "console": "php app\\bin\\console.php",
         "phinx": "vendor\\bin\\phinx",
         "migration:create": "vendor\\bin\\phinx create",
         "migrate": "php app\\bin\\console.php migrate",
