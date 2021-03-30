@@ -5,7 +5,10 @@
         "jenssegers/blade": "^1.2",
         "robmorgan/phinx": "^0.11.4",
         "fzaninotto/faker": "^1.9",
-        "symfony/console": "^5.2"
+        "symfony/console": "^5.2",
+        "symfony/polyfill-ctype": "^1.22",
+        "symfony/polyfill-mbstring": "^1.22",
+        "vlucas/phpdotenv": "^5.3"
     },
 
     "autoload": {

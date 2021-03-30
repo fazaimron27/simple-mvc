@@ -6,7 +6,7 @@ class Helper
 {
     public static function redirect($location)
     {
-        header('Location: ' . BASEURL . '/' . $location);
+        header('Location: ' . BASEURL  . $location);
         exit;
     }
 
@@ -17,5 +17,11 @@ class Helper
         } else {
             return false;
         }
+    }
+
+    public static function dd($data = [])
+    {
+        var_dump($data);
+        die;
     }
 }

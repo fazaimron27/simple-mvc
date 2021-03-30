@@ -11,7 +11,7 @@ class Auth extends Controller
     public function login()
     {
         if (Helper::auth()) {
-            Helper::redirect('home');
+            Helper::redirect('');
         }
         $this->view('auth.login');
     }
@@ -19,18 +19,20 @@ class Auth extends Controller
     public function postLogin()
     {
         if (Helper::auth()) {
-            Helper::redirect('home');
+            Helper::redirect('');
         }
 
-        $user = User::where(['username' => $_POST["username"]])->firstOrFail();
-        if ($user->count() > 0) {
+        $user = User::where(['username' => $_POST["username"]])->first();
+        if ($user) {
             if (password_verify($_POST["password"], $user->password)) {
                 $_SESSION["auth"] = true;
                 $_SESSION["user_id"] = $user->id;
-                Helper::redirect('home');
+                Helper::redirect('');
             } else {
                 Helper::redirect('auth/login');
             }
+        } else {
+            Helper::redirect('auth/login');
         }
     }
 

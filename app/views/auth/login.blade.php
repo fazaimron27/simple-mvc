@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ BASEURL }}/public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ BASEURL }}/public/css/datatables.min.css">
+    <link rel="stylesheet" href="{{ BASEURL }}public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ BASEURL }}public/css/datatables.min.css">
 
     <title>Login</title>
 </head>
@@ -20,7 +20,7 @@
                 <div class="card shadow">
                     <div class="card-header">Login Form</div>
                     <div class="card-body">
-                        <form action="{{ BASEURL }}/auth/postLogin" method="post">
+                        <form action="{{ BASEURL }}auth/postLogin" method="post">
                             <div class="form-group">
                                 <label for="username">Username</label>
                                 <input type="text" name="username" id="username" class="form-control"
@@ -41,9 +41,9 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="{{ BASEURL }}/public/js/jquery-3.4.1.js"></script>
-    <script src="{{ BASEURL }}/public/js/popper.min.js"></script>
-    <script src="{{ BASEURL }}/public/js/bootstrap.min.js"></script>
+    <script src="{{ BASEURL }}public/js/jquery-3.4.1.js"></script>
+    <script src="{{ BASEURL }}public/js/popper.min.js"></script>
+    <script src="{{ BASEURL }}public/js/bootstrap.min.js"></script>
 </body>
 
 </html>
