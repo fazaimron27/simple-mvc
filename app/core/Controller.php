@@ -9,7 +9,7 @@ class Controller
     public function view($view, $data = [])
     {
         $path = 'app/views';
-        $blade = new Blade($path, $path . '/cache');
+        $blade = new Blade($path, 'storage/views');
 
         echo $blade->make($view, $data);
     }

@@ -8,12 +8,12 @@ use App\Config\Config;
 
 $cfg = new Config();
 
-if ($cfg->env === 'development' || $cfg->env === 'testing') {
+if ($cfg->_env === 'development' || $cfg->_env === 'testing') {
     error_reporting(E_ALL);
-} else if ($cfg->env === 'production') {
+} else if ($cfg->_env === 'production') {
     error_reporting(0);
 } else {
-    die('ERROR REPORT NOT FOUND');
+    die('ENVIRONMENT NOT FOUND');
 }
 
 require_once 'config/phinx.php';

@@ -12,13 +12,13 @@ define('BASEURL', $base_url);
 
 class Config
 {
-    public $env;
+    public $_env;
 
     public function __construct()
     {
         $dotenv = Dotenv::createImmutable(__DIR__);
         $dotenv->load();
 
-        $this->env = $_ENV['ENVIRONMENT'];
+        $this->_env = $_ENV['ENVIRONMENT'];
     }
 }
